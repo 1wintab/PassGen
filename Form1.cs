@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PassGen
 {
-    public partial class Form1 : Form
+    public partial class PassGen : Form
     {
-        public Form1()
+        public PassGen()
         {
             InitializeComponent();
 
@@ -31,8 +31,8 @@ namespace PassGen
         {
             if (string.IsNullOrWhiteSpace(lengthField.Text))
             {
-                MessageBox.Show(this, "Помилка! Ви не вказати розмір паролю.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Пропускаємо, щоб уникнути повторного виклику
+                ShowError("You didn't specify the password length!");
+                return;
             }
 
             if (int.TryParse(lengthField.Text, out int lengthpass))
@@ -43,8 +43,7 @@ namespace PassGen
             }
             else
             {
-                //MessageBox.Show("Помилка! Введено не число.");
-                MessageBox.Show(this, "Помилка! Введено некоректні дані!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowError("Invalid data entered!");
                 lengthField.Text = "";
             }
         }
@@ -58,7 +57,7 @@ namespace PassGen
             }
             else
             {
-                MessageBox.Show(this, "Помилка! Пароль відсутній.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowError("Password is missing!");
             }
         }
 
@@ -70,7 +69,7 @@ namespace PassGen
             timer.Interval = 2500;
             timer.Tick += (s, args) =>
             {
-                isCopied.Visible=false;
+                isCopied.Visible = false;
                 ((Timer)s).Stop();
                 ((Timer)s).Dispose();
             };
@@ -85,9 +84,9 @@ namespace PassGen
             }
             else
             {
-                MessageBox.Show(this, "Помилка! Пароль відсутній.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowError("Password is missing!");
             }
-                
+
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
@@ -133,11 +132,11 @@ namespace PassGen
         private void GeneratePassword(object sender, EventArgs e)
         {
             string numbers = "1234567890";
-            string lowerLetters = "abcdefghijklmnopqrstuvwxyz"; 
+            string lowerLetters = "abcdefghijklmnopqrstuvwxyz";
             string upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             string specialChars = "!@#$%^&*()_+-=[]{}|;:'\"\\,.<>?/";
             string password = "";
-            
+
             Random rnd = new Random();
 
             string characters = "";
@@ -148,7 +147,7 @@ namespace PassGen
 
             if (string.IsNullOrEmpty(characters))
             {
-                MessageBox.Show(this, "Помилка: Ви не обрали жоден вид символів.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowError("You didn't select any type of symbols");
             }
             else
             {
@@ -157,32 +156,52 @@ namespace PassGen
                     password += characters[rnd.Next(characters.Length)];
                 }
 
-                passwordField.Text = password;   
+                passwordField.Text = password;
             }
         }
 
+        private void ShowError(string message)
+        {
+            Form2 errorPopup = new Form2();
+
+            // Центруємо вікно помилки відносно головної форми
+            errorPopup.StartPosition = FormStartPosition.Manual;
+            errorPopup.Location = new Point(
+                this.Location.X + (this.Width - errorPopup.Width) / 2,
+                this.Location.Y + (this.Height - errorPopup.Height) / 2
+            );
+            
+            errorPopup.SetErrorText(message);
+            errorPopup.ShowDialog();
+        }
+
         #region
-        private void Form1_Load(object sender, EventArgs e) {}
-        private void label1_Click(object sender, EventArgs e) {}
-        private void label2_Click(object sender, EventArgs e) {}
-        private void label3_Click(object sender, EventArgs e) {}
-        private void label4_Click(object sender, EventArgs e) {}
-        private void label5_Click(object sender, EventArgs e) {}
-        private void label8_Click(object sender, EventArgs e) {}
-        private void panel1_Paint(object sender, PaintEventArgs e) {}
-        private void panel2_Paint(object sender, PaintEventArgs e) {}
-        private void pictureBox1_Click(object sender, EventArgs e) {}
-        private void passwordField_TextChanged(object sender, EventArgs e) {}
-        private void lengthField_TextChanged(object sender, EventArgs e) {}
-        private void cbDigit_CheckedChanged_1(object sender, EventArgs e) {}
-        private void cbSpecial_CheckedChanged(object sender, EventArgs e) {}
-        private void cbUpper_CheckedChanged(object sender, EventArgs e) {}
-        private void cbLower_CheckedChanged(object sender, EventArgs e) {}
-        private void lengthField_TextChanged_1(object sender, EventArgs e) {}
-        private void label7_Click(object sender, EventArgs e) {}
-        private void label9_Click(object sender, EventArgs e) {}
-        private void label6_Click(object sender, EventArgs e) {}
-        private void isCopied_Click(object sender, EventArgs e) {}
+        private void Form1_Load(object sender, EventArgs e) { }
+        private void label1_Click(object sender, EventArgs e) { }
+        private void label2_Click(object sender, EventArgs e) { }
+        private void label3_Click(object sender, EventArgs e) { }
+        private void label4_Click(object sender, EventArgs e) { }
+        private void label5_Click(object sender, EventArgs e) { }
+        private void label8_Click(object sender, EventArgs e) { }
+        private void panel1_Paint(object sender, PaintEventArgs e) { }
+        private void panel2_Paint(object sender, PaintEventArgs e) { }
+        private void pictureBox1_Click(object sender, EventArgs e) { }
+        private void passwordField_TextChanged(object sender, EventArgs e) { }
+        private void lengthField_TextChanged(object sender, EventArgs e) { }
+        private void cbDigit_CheckedChanged_1(object sender, EventArgs e) { }
+        private void cbSpecial_CheckedChanged(object sender, EventArgs e) { }
+        private void cbUpper_CheckedChanged(object sender, EventArgs e) { }
+        private void cbLower_CheckedChanged(object sender, EventArgs e) { }
+        private void lengthField_TextChanged_1(object sender, EventArgs e) { }
+        private void label7_Click(object sender, EventArgs e) { }
+        private void label9_Click(object sender, EventArgs e) { }
+        private void label6_Click(object sender, EventArgs e) { }
+        private void isCopied_Click(object sender, EventArgs e) { }
         #endregion
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
