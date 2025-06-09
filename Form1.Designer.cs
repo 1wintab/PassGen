@@ -82,7 +82,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.StartButton);
-            this.panel1.Location = new System.Drawing.Point(-8, -1);
+            this.panel1.Location = new System.Drawing.Point(-9, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(765, 472);
             this.panel1.TabIndex = 2;
@@ -95,17 +95,17 @@
             this.isCopied.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(123)))), ((int)(((byte)(145)))));
             this.isCopied.Font = new System.Drawing.Font("Comic Sans MS", 12F);
             this.isCopied.ForeColor = System.Drawing.Color.Black;
-            this.isCopied.Location = new System.Drawing.Point(584, 328);
+            this.isCopied.Location = new System.Drawing.Point(609, 329);
             this.isCopied.Name = "isCopied";
-            this.isCopied.Size = new System.Drawing.Size(117, 23);
+            this.isCopied.Size = new System.Drawing.Size(71, 23);
             this.isCopied.TabIndex = 22;
-            this.isCopied.Text = "(Скопійовано)";
+            this.isCopied.Text = "(Copied)";
             this.isCopied.Click += new System.EventHandler(this.isCopied_Click);
             // 
             // cbLower
             // 
             this.cbLower.AutoSize = true;
-            this.cbLower.Location = new System.Drawing.Point(495, 188);
+            this.cbLower.Location = new System.Drawing.Point(425, 188);
             this.cbLower.Name = "cbLower";
             this.cbLower.Size = new System.Drawing.Size(15, 14);
             this.cbLower.TabIndex = 21;
@@ -118,17 +118,17 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 18F);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(342, 175);
+            this.label9.Location = new System.Drawing.Point(302, 175);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(157, 33);
+            this.label9.Size = new System.Drawing.Size(125, 33);
             this.label9.TabIndex = 20;
-            this.label9.Text = "малих літер";
+            this.label9.Text = "lowercase";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // lengthField
             // 
             this.lengthField.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lengthField.Location = new System.Drawing.Point(510, 89);
+            this.lengthField.Location = new System.Drawing.Point(468, 89);
             this.lengthField.MaxLength = 3;
             this.lengthField.Name = "lengthField";
             this.lengthField.Size = new System.Drawing.Size(46, 32);
@@ -138,11 +138,11 @@
             // FullReset
             // 
             this.FullReset.Font = new System.Drawing.Font("Comic Sans MS", 13F);
-            this.FullReset.Location = new System.Drawing.Point(580, 12);
+            this.FullReset.Location = new System.Drawing.Point(570, 12);
             this.FullReset.Name = "FullReset";
             this.FullReset.Size = new System.Drawing.Size(144, 43);
             this.FullReset.TabIndex = 18;
-            this.FullReset.Text = "Скинути все";
+            this.FullReset.Text = "Reset all";
             this.FullReset.UseVisualStyleBackColor = true;
             this.FullReset.Click += new System.EventHandler(this.FullReset_Click);
             // 
@@ -153,7 +153,7 @@
             this.DeletePassword.Name = "DeletePassword";
             this.DeletePassword.Size = new System.Drawing.Size(190, 43);
             this.DeletePassword.TabIndex = 17;
-            this.DeletePassword.Text = "Видалити пароль";
+            this.DeletePassword.Text = "Delete password";
             this.DeletePassword.UseVisualStyleBackColor = true;
             this.DeletePassword.Click += new System.EventHandler(this.DeletePassword_Click);
             // 
@@ -165,9 +165,9 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(28, 287);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(522, 33);
+            this.label8.Size = new System.Drawing.Size(509, 33);
             this.label8.TabIndex = 16;
-            this.label8.Text = "Швидке копіювання пароля  (через кнопку):";
+            this.label8.Text = "Fast password copying (button on the right):";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // CopyPassword
@@ -179,7 +179,7 @@
             this.CopyPassword.Name = "CopyPassword";
             this.CopyPassword.Size = new System.Drawing.Size(144, 43);
             this.CopyPassword.TabIndex = 15;
-            this.CopyPassword.Text = "Скопіювати";
+            this.CopyPassword.Text = "Copy password";
             this.CopyPassword.UseVisualStyleBackColor = false;
             this.CopyPassword.Click += new System.EventHandler(this.CopyPassword_Click);
             // 
@@ -193,18 +193,18 @@
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(175, 43);
             this.CloseButton.TabIndex = 14;
-            this.CloseButton.Text = "Вийти з програми";
+            this.CloseButton.Text = "Exit";
             this.CloseButton.UseVisualStyleBackColor = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // passwordField
             // 
             this.passwordField.Font = new System.Drawing.Font("Comic Sans MS", 13F);
-            this.passwordField.Location = new System.Drawing.Point(191, 241);
+            this.passwordField.Location = new System.Drawing.Point(210, 241);
             this.passwordField.MaxLength = 999;
             this.passwordField.Name = "passwordField";
             this.passwordField.ReadOnly = true;
-            this.passwordField.Size = new System.Drawing.Size(523, 32);
+            this.passwordField.Size = new System.Drawing.Size(504, 32);
             this.passwordField.TabIndex = 13;
             this.passwordField.TextChanged += new System.EventHandler(this.passwordField_TextChanged);
             // 
@@ -222,7 +222,7 @@
             // cbSpecial
             // 
             this.cbSpecial.AutoSize = true;
-            this.cbSpecial.Location = new System.Drawing.Point(688, 187);
+            this.cbSpecial.Location = new System.Drawing.Point(662, 187);
             this.cbSpecial.Name = "cbSpecial";
             this.cbSpecial.Size = new System.Drawing.Size(15, 14);
             this.cbSpecial.TabIndex = 10;
@@ -232,7 +232,7 @@
             // cbUpper
             // 
             this.cbUpper.AutoSize = true;
-            this.cbUpper.Location = new System.Drawing.Point(321, 188);
+            this.cbUpper.Location = new System.Drawing.Point(275, 188);
             this.cbUpper.Name = "cbUpper";
             this.cbUpper.Size = new System.Drawing.Size(15, 14);
             this.cbUpper.TabIndex = 9;
@@ -259,7 +259,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 30);
             this.label7.TabIndex = 6;
-            this.label7.Text = "цифр";
+            this.label7.Text = "digits";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
@@ -268,11 +268,11 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 18F);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(515, 175);
+            this.label6.Location = new System.Drawing.Point(449, 175);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(177, 33);
+            this.label6.Size = new System.Drawing.Size(217, 33);
             this.label6.TabIndex = 5;
-            this.label6.Text = "спецсимволів";
+            this.label6.Text = "special characters";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
@@ -281,11 +281,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 18F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(147, 174);
+            this.label5.Location = new System.Drawing.Point(151, 174);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(179, 33);
+            this.label5.Size = new System.Drawing.Size(126, 33);
             this.label5.TabIndex = 4;
-            this.label5.Text = "великих літер";
+            this.label5.Text = "uppercase";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
@@ -296,9 +296,9 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(27, 238);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 33);
+            this.label4.Size = new System.Drawing.Size(185, 33);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Ваш пароль:";
+            this.label4.Text = "Your password:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
@@ -310,9 +310,9 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(31, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(297, 33);
+            this.label3.Size = new System.Drawing.Size(368, 33);
             this.label3.TabIndex = 2;
-            this.label3.Text = "2. Чи потрібна наявність:";
+            this.label3.Text = "2. Is it needed in the password:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
@@ -323,18 +323,18 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(26, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(485, 33);
+            this.label2.Size = new System.Drawing.Size(440, 33);
             this.label2.TabIndex = 2;
-            this.label2.Text = "1. Введіть довжину в цифрах (макс. 999):";
+            this.label2.Text = "1. Enter the length in digits (max 999)";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(95, 12);
+            this.panel2.Location = new System.Drawing.Point(94, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(236, 53);
+            this.panel2.Size = new System.Drawing.Size(246, 53);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -344,11 +344,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(5, 10);
+            this.label1.Location = new System.Drawing.Point(7, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 33);
+            this.label1.Size = new System.Drawing.Size(238, 33);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Генератор паролів";
+            this.label1.Text = "Password Generator";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // StartButton
@@ -360,7 +360,7 @@
             this.StartButton.Name = "StartButton";
             this.StartButton.Size = new System.Drawing.Size(188, 43);
             this.StartButton.TabIndex = 18;
-            this.StartButton.Text = "Створити пароль";
+            this.StartButton.Text = "Create password";
             this.StartButton.UseVisualStyleBackColor = true;
             this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
