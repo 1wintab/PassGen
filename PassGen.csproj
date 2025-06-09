@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Copilot_20250609_172418.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -99,6 +102,7 @@
     <None Include="Resources\images.jpeg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Copilot_20250609_172418.ico" />
     <Content Include="Resources\error-uwu-sound-effect.wav" />
     <None Include="Resources\errorPicture.png" />
     <None Include="Resources\errorIco.ico" />
