@@ -197,11 +197,10 @@ namespace PassGen
         private void label9_Click(object sender, EventArgs e) { }
         private void label6_Click(object sender, EventArgs e) { }
         private void isCopied_Click(object sender, EventArgs e) { }
-        #endregion
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
+        #endregion
     }
 }
